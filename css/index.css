@@ -7,12 +7,21 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-blue-800: oklch(42.4% 0.199 265.638);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
+    --font-Monserrat: "Monserrat", "Monserrat";
+    --font-Sportation: "Sportation", "Sportation";
+    --color-1B: #FBFBF6;
+    --color-2A: #F0AD21;
+    --color-3RF: #F91B40;
+    --color-4RB: #FB7187;
+    --color-5AC: #2791E5;
+    --color-6GM: #464646;
   }
 }
 @layer base {
@@ -164,8 +173,11 @@
   }
 }
 @layer utilities {
-  .bg-red-500 {
-    background-color: var(--color-red-500);
+  .bg-blue-800 {
+    background-color: var(--color-blue-800);
+  }
+  .font-BaksoSapi {
+    font-family: var(--font-BaksoSapi);
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -175,9 +187,39 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .text-2A {
+    color: var(--color-2A);
+  }
   .underline {
     text-decoration-line: underline;
   }
+}
+@font-face {
+  font-family: "BaksoSapi";
+  src: url(/fonts/BaksoSapi.otf)format("opentype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Monserrat";
+  src: url(/fonts/Monserrat.ttf)format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Sportation";
+  src: url(/fonts/Sportation.ttf)format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 @property --tw-font-weight {
   syntax: "*";

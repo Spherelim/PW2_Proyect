@@ -1,5 +1,15 @@
-@import "tailwindcss";
-
+:root {
+    --color-blanco: #1D2984;
+    --color-amarillo: #B2EB14;
+    --color-rosafuerte: #504AF4;
+    --color-rosaclaro: #FAFAF1;
+    --color-azulclaro: #AFC5F4;
+    --color-grismedio: #000000;
+    
+    --font-bakso: 'BaksoSapi', sans-serif;
+    --font-monserrat: 'Monserrat', sans-serif;
+    --font-sportation: 'Sportation', sans-serif;
+}
 
 @font-face {
     font-family: "BaksoSapi";
@@ -35,20 +45,7 @@
     box-sizing: border-box;
 }
 
+h1{
 
-@theme {
-    --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
-    --font-Monserrat: "Monserrat", "Monserrat";
-    --font-Sportation: "Sportation", "Sportation";
-    --color-1B: #FBFBF6;
-    --color-2A: #F0AD21;
-    --color-3RF: #F91B40;
-    --color-4RB: #FB7187;
-    --color-5AC: #2791E5;
-    --color-6GM: #464646;
-
-
-
-
+    font-family: var(--font-bakso);
 }
-
