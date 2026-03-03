@@ -1,0 +1,20 @@
+{
+  "name": "pw2_proyect",
+  "version": "1.0.0",
+  "description": "Integrantes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./css/index.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spherelim/PW2_Proyect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spherelim/PW2_Proyect/issues"
+  },
+  "homepage": "https://github.com/Spherelim/PW2_Proyect#readme"
+}

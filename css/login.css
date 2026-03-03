@@ -1,0 +1,49 @@
+:root {
+
+    --color-100: #1D2984;
+    --color-200: #B2EB14;
+    --color-300: #504AF4;
+    --color-400: #FAFAF1;
+    --color-500: #AFC5F4;
+    --color-600: #000000;
+    --letra-BaksoSapi: 'BaksoSapi', BaksoSapi;
+    --letra-Monserrat: 'Monserrat', Monserrat;
+    --letra-Sportation: 'Sportation', Sportation;
+   
+}
+
+@font-face {
+    font-family: "BaksoSapi";
+    src: url(/fonts/BaksoSapi.otf)format("opentype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "Monserrat";
+    src: url(/fonts/Monserrat.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Sportation";
+    src: url(/fonts/Sportation.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
