@@ -4,7 +4,7 @@
     --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
     --font-Monserrat: "Monserrat", "Monserrat";
     --font-Sportation: "Sportation", "Sportation";
-    --font-Afacad: "Afacad-VariableFont_wght","Afacad-VariableFont_wght";
+    --font-Afacad: "Afacad-Regular","Afacad-Regular";
     --color-1B: #FBFBF6;
     --color-2A: #F0AD21;
     --color-3RF: #F91B40;
@@ -49,8 +49,8 @@
 }
 
 @font-face {
-    font-family: "Afacad";
-    src: url(/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+    font-family: "Afacad-Regular";
+    src: url(/fonts/Afacad-Regular.ttf)format("truetype")
 }
 
 * {
@@ -60,3 +60,144 @@
 }
 
 
+
+.wrapperProf {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
+
+
+.bodyProf {
+
+    width: 1354px;
+    height: 633px;
+    box-shadow: 0px 7px 6px #464646;
+    background-color: var(--color-1B);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+
+.perfilReg {
+    display: grid;
+    gap: 10px;
+    margin: 40px;
+}
+
+
+.imgReg {
+    border-radius: 100%;
+    width: 450px;
+    height: 450px;
+}
+
+.wrapperImg {
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.img-upload {
+
+
+    font-family: var(--font-400);
+    color: var(--color-400);
+    font-size: 20px;
+    background-color: var(--color-100);
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+
+}
+
+
+.wrapperProfile {
+
+    width: 793px;
+    height: 420px;
+    display: grid;
+}
+
+
+
+.lProf {
+    font-family: var(--font-Sportation);
+    font-size: 35px;
+    color: var(--color-3RF);
+    text-align: left;
+    padding: 0px 170px 0px 0px;
+}
+
+
+.iProf {
+    background-color: var(--color-3RF);
+    border: none;
+    border-radius: 24px;
+    width: 580px;
+    height: 35px;
+
+    font-family: var(--font-Afacad);
+    font-size: 25px;
+    font-weight: lighter;
+    color: var(--color-1B);
+    text-align: center;
+    outline: none;
+}
+
+.iReg:hover{
+    outline: #FB7187;
+    border: 4px solid #FB7187;
+}
+
+.gridProf{
+    display: grid;
+   
+}
+
+.imgProf{
+    position: fixed;
+    top: 180px;
+    right: 200px;
+    
+}
+
+
+#linkFav{
+
+    font-family: var(--font-Sportation);
+    background-image: url(/image/btn-favoritos.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    font-weight: lighter;
+    color: var(--color-1B);
+    width: 400px;
+    height: 60px;
+    border: none;
+   
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    position: fixed;
+
+
+    top: 700px;
+    right: 200px;
+
+}
+
+#aFav{
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-1B);
+    font-size: 40px;
+    background-color: transparent;
+
+}
