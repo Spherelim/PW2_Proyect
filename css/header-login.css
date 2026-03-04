@@ -1,16 +1,17 @@
+
 :root {
 
-    --color-100: #1D2984;
-    --color-200: #B2EB14;
-    --color-300: #504AF4;
-    --color-400: #FAFAF1;
-    --color-500: #AFC5F4;
-    --color-600: #000000;
-    --letra-BaksoSapi: 'BaksoSapi', BaksoSapi;
-    --letra-Monserrat: 'Monserrat', Monserrat;
-    --letra-Sportation: 'Sportation', Sportation;
-   
+    --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
+    --font-Monserrat: "Monserrat", "Monserrat";
+    --font-Sportation: "Sportation", "Sportation";
+    --color-1B: #FBFBF6;
+    --color-2A: #F0AD21;
+    --color-3RF: #F91B40;
+    --color-4RB: #FB7187;
+    --color-5AC: #2791E5;
+    --color-6GM: #464646;
 }
+
 
 @font-face {
     font-family: "BaksoSapi";
@@ -47,3 +48,100 @@
 }
 
 
+
+
+
+body{
+    background-image: url("/image/index-fondo.png");
+}
+
+.navbar {
+    background-color: var(--color-2A);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0px 40px 0px 40px;
+    height: 120px;
+}
+
+.wrapper-logo {
+    margin-bottom: 12px ;
+}
+
+
+#titulo {
+
+    font-family: var(--font-BaksoSapi);
+    font-size: 60px;
+    color: var(--color-1B);
+
+}
+
+.wrapper-opcLogin {
+
+    padding-left: 750px;
+}
+
+.ul-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.li-opc{
+    padding: 0px 30px 0px 0px;
+}
+
+.header-icon{
+    
+   
+    width: 80px;
+    height: 80px;
+}
+
+
+#subtitulo {
+
+    font-family: var(--letra-400);
+    font-size: 25px;
+    color: var(--color-100);
+    text-decoration: none;
+}
+
+
+.wrapper-btn {
+    background-color: var(--color-500);
+    border-radius: 50px;
+    width: 200px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px ;
+}
+
+.btn-login {
+    text-decoration: none;
+    color: var(--color-100);
+    font-family: var(--letra-400);
+    font-size: 25px;
+
+}
+
+
+.wrapper-perfil{
+   display: flex;
+   align-items: center;
+   margin-bottom: 12px;
+   border-color: var(--color-5AC);
+}
+
+.img-perfil{
+    border: 4px solid #2791E5;
+    border-radius: 50%;
+   
+
+    height: 80px;
+    width: 80px;
+   
+}

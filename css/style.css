@@ -1,19 +1,20 @@
 :root {
-    --color-blanco: #1D2984;
-    --color-amarillo: #B2EB14;
-    --color-rosafuerte: #504AF4;
-    --color-rosaclaro: #FAFAF1;
-    --color-azulclaro: #AFC5F4;
-    --color-grismedio: #000000;
-    
-    --font-bakso: 'BaksoSapi', sans-serif;
-    --font-monserrat: 'Monserrat', sans-serif;
-    --font-sportation: 'Sportation', sans-serif;
+
+    --color-100: #1D2984;
+    --color-200: #B2EB14;
+    --color-300: #504AF4;
+    --color-400: #FAFAF1;
+    --color-500: #AFC5F4;
+    --color-600: #000000;
+    --letra-100: 'agains_modern_football', agains_modern_football;
+    --letra-200: 'Monserrat', Monserrat;
+    --letra-300: 'PRIMETIME', PRIMETIME;
+    --letra-400: 'Staatliches-Regular', Staatliches-Regular;
 }
 
 @font-face {
-    font-family: "BaksoSapi";
-    src: url(/fonts/BaksoSapi.otf)format("opentype")
+    font-family: "agains_modern_football";
+    src: url(/fonts/against_modern_football.ttf)format("truetype")
 }
 
 * {
@@ -22,6 +23,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Staatliches-Regular";
+    src: url(/fonts/Staatliches-Regular.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 @font-face {
     font-family: "Monserrat";
@@ -35,8 +46,8 @@
 }
 
 @font-face {
-    font-family: "Sportation";
-    src: url(/fonts/Sportation.ttf)format("truetype")
+    font-family: "PRIMETIME";
+    src: url(/fonts/PRIMETIME.ttf)format("truetype")
 }
 
 * {
@@ -45,7 +56,99 @@
     box-sizing: border-box;
 }
 
-h1{
 
-    font-family: var(--font-bakso);
+
+
+body{
+    background-color: var(--color-400);
+}
+
+.navbar {
+    background-image: url("/Image/Header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0px 40px 0px 40px;
+    height: 120px;
+}
+
+.wrapper-logo {
+    margin-bottom: 12px ;
+}
+
+
+#titulo {
+
+    font-family: var(--letra-100);
+    font-size: 40px;
+    color: #1D2984;
+
+}
+
+.wrapper-opcLogin {
+
+    padding-left: 750px;
+}
+
+.ul-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.li-opc{
+    padding: 0px 30px 0px 0px;
+}
+
+.header-icon{
+    
+   
+    width: 60px;
+    height: 60px;
+}
+
+#subtitulo {
+
+    font-family: var(--letra-400);
+    font-size: 25px;
+    color: var(--color-100);
+    text-decoration: none;
+}
+
+
+.wrapper-btn {
+    background-color: var(--color-500);
+    border-radius: 50px;
+    width: 200px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px ;
+}
+
+.btn-login {
+    text-decoration: none;
+    color: var(--color-100);
+    font-family: var(--letra-400);
+    font-size: 25px;
+
+}
+
+
+.wrapper-perfil{
+   display: flex;
+   align-items: center;
+   margin-bottom: 12px;
+   border-color: var(--color-200);
+}
+
+.img-perfil{
+    border: 4px solid #B2EB14;
+    border-radius: 50%;
+   
+
+    height: 80px;
+    width: 80px;
+   
 }
