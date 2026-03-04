@@ -6,6 +6,7 @@ module.exports = {
         letraBakso: ['var(--font-BaksoSapi)'],
         letraMon: ['var(--font-Monserrat)'],
         letraSport: ['var(--font-Sportation)'],
+        letraAfacad: ['var(--font-Afacad)']
       },
       colors: {
         Blanco: 'var(--color-1B)',

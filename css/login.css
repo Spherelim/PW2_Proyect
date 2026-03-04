@@ -1,16 +1,18 @@
+
 :root {
 
-    --color-100: #1D2984;
-    --color-200: #B2EB14;
-    --color-300: #504AF4;
-    --color-400: #FAFAF1;
-    --color-500: #AFC5F4;
-    --color-600: #000000;
-    --letra-BaksoSapi: 'BaksoSapi', BaksoSapi;
-    --letra-Monserrat: 'Monserrat', Monserrat;
-    --letra-Sportation: 'Sportation', Sportation;
-   
+    --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
+    --font-Monserrat: "Monserrat", "Monserrat";
+    --font-Sportation: "Sportation", "Sportation";
+    --font-Afacad: "Afacad-Regular","Afacad-Regular";
+    --color-1B: #FBFBF6;
+    --color-2A: #F0AD21;
+    --color-3RF: #F91B40;
+    --color-4RB: #FB7187;
+    --color-5AC: #2791E5;
+    --color-6GM: #464646;
 }
+
 
 @font-face {
     font-family: "BaksoSapi";
@@ -46,13 +48,24 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Afacad-Regular";
+    src: url(/fonts/Afacad-Regular.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 
 
 body{
 
-background-image: url("/Image/fondo-icon.png");
 
-background-position: center;
 
 }
 
@@ -68,11 +81,10 @@ margin-top: 40px;
 
 .bodyLogin {
 
-
     width: 748px;
     height: 588px;
-    box-shadow: 0px 7px 6px rgb(29, 41, 132,0.5);
-    background-color: var(--color-200);
+    box-shadow: 0px 7px 6px #464646;
+    background-color: var(--color-1B);
     border-radius: 50px;
     display: grid;
     justify-content: center;
@@ -81,48 +93,58 @@ margin-top: 40px;
 }
 .tLogin{
 
-    font-family: var(--letra-400);
+    font-family: var(--font-Sportation);
     font-size: 80px;
-    color: var(--color-100);
+    color: var(--color-3RF);
     text-align: center;
     padding-top: 57px;
 }
 
 
 .lLogin{
-    font-family: var(--letra-400);
-    font-size: 35px;
-    color: var(--color-100);
+    font-family: var(--font-Sportation);
+    font-size: 40px;
+    color: var(--color-6GM);
     text-align: center;
     padding: 4px 0px 4px 0px;
 }
 
 
 .iLogin{
-    background-color: var(--color-100);
+    background-color: var(--color-3RF);
     border: none;
     border-radius:25px; 
     width: 400px;
     height: 60px;
     margin: 0 auto;
-    font-family: var(--letra-200);
-    font-size: 25px;
-    color: var(--color-400);
+    font-family: var(--font-Afacad);
+    font-size: 30px;
+    color: var(--color-1B);
     text-align: center;
+    outline: #FB7187;
 }
+
+.iLogin:hover{
+    outline: #FB7187;
+    border: 4px solid #FB7187;
+}
+
 
 .txtReg{
-    font-family: var(--letra-200);
-    color: var(--color-400);
+    
+    font-family: var(--font-Afacad);
+    color: var(--color-6GM);
     font-weight:500;
-    font-size: 20px;
-    padding-top: 20px;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 10px;
 }
 
-a{
+.linkReg{
     text-decoration: none;
-    font-weight: bolder;
-    color: var(--color-100);
+    font-family: var(--font-Afacad);
+    color: var(--color-3RF);
+    font-weight: bold;
 }
 
 .wrapperBtn{
@@ -134,14 +156,16 @@ a{
 
 .btn-reg {
 
-    font-family: var(--letra-400);
-    font-size: 40px;
-    color:var(--color-100);
-    background-color: #FAFAF1;
+    font-family: var(--font-Sportation);
+    font-size: 45px;
+    font-weight: lighter;
+    color:var(--color-1B);
+    background-color: var(--color-4RB);
     text-align: center;
     width: 214px;
     height: 70px;
     border-radius: 50px;
     border: none;
+    text-decoration: none;
    
 }
