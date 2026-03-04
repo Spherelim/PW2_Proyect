@@ -4,7 +4,7 @@
     --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
     --font-Monserrat: "Monserrat", "Monserrat";
     --font-Sportation: "Sportation", "Sportation";
-    --font-Afacad: "Afacad-VariableFont_wght","Afacad-VariableFont_wght";
+    --font-Afacad: "Afacad-Regular","Afacad-Regular";
     --color-1B: #FBFBF6;
     --color-2A: #F0AD21;
     --color-3RF: #F91B40;
@@ -49,8 +49,8 @@
 }
 
 @font-face {
-    font-family: "Afacad";
-    src: url(/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+    font-family: "Afacad-Regular";
+    src: url(/fonts/Afacad-Regular.ttf)format("truetype")
 }
 
 * {
@@ -64,10 +64,10 @@
 
 body {
 
-    background-image: url("/Image/fondo-icon.png");
+    background-image: url("/Image/index-fondo.png");
 
     background-position: center;
-
+    
 }
 
 
@@ -76,7 +76,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
+   
 }
 
 
@@ -84,8 +84,8 @@ body {
 
     width: 1354px;
     height: 633px;
-    box-shadow: 0px 7px 6px rgb(29, 41, 132, 0.5);
-    background-color: var(--color-200);
+    box-shadow: 0px 7px 6px #464646;
+    background-color: var(--color-1B);
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -116,7 +116,7 @@ body {
 .img-upload {
 
 
-    font-family: var(--letra-400);
+    font-family: var(--font-400);
     color: var(--color-400);
     font-size: 20px;
     background-color: var(--color-100);
@@ -145,9 +145,9 @@ body {
 
 .tReg {
 
-    font-family: var(--letra-400);
+    font-family: var(--font-Sportation);
     font-size: 80px;
-    color: var(--color-100);
+    color: var(--color-3RF);
     text-align: center;
 
 }
@@ -156,50 +156,53 @@ body {
 
 
 .lReg {
-    font-family: var(--letra-400);
-    font-size: 28px;
-    color: var(--color-100);
+    font-family: var(--font-Sportation);
+    font-size: 35px;
+    color: var(--color-3RF);
     text-align: left;
     padding: 0px 170px 0px 0px;
 }
 
 
 .iReg {
-    background-color: var(--color-100);
+    background-color: var(--color-3RF);
     border: none;
     border-radius: 24px;
     width: 350px;
     height: 39px;
 
-    font-family: var(--letra-200);
+    font-family: var(--font-Afacad);
     font-size: 25px;
-    color: var(--color-400);
+    font-weight: lighter;
+    color: var(--color-1B);
     text-align: center;
+    outline: none;
+}
 
+.iReg:hover{
+    outline: #FB7187;
+    border: 4px solid #FB7187;
 }
 
 
 
-.wrapperBtn {
-    display: flex;
-    justify-content: center;
-    margin: 50px;
-}
+.formBtnReg {
 
-
-.btn-reg {
-
-    font-family: var(--letra-400);
+    font-family: var(--font-Sportation);
+    background-image: url(/image/btn-registro.png);
     font-size: 30px;
-    color: var(--color-100);
-    width: 350px;
-    height: 39px;
+    font-weight: lighter;
+    color: var(--color-1B);
+    width: 346px;
+    height: 60px;
     border-radius: 50px;
     border: none;
 
 }
 
-a{
+.aBtnReg{
     text-decoration: none;
-    color: var(--color-100);
+    color: var(--color-1B);
+    font-size: 40px;
+    background-color: transparent;
 }
