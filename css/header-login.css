@@ -62,6 +62,7 @@ body{
     background-position: center;
     padding: 0px 40px 0px 40px;
     height: 120px;
+    box-shadow: 2px 10px 20px #464646
 }
 
 .wrapper-logo {
@@ -103,18 +104,18 @@ body{
 
 #subtitulo {
 
-    font-family: var(--letra-400);
-    font-size: 25px;
-    color: var(--color-100);
+    font-family: var(--font-Sportation);
+    font-size: 48px;
+    color: var(--color-1B);
     text-decoration: none;
 }
 
 
 .wrapper-btn {
-    background-color: var(--color-500);
-    border-radius: 50px;
-    width: 200px;
-    height: 50px;
+    background-image: url(/image/btn-ingresar.png);
+    border-radius: 25px;
+    width: 164px;
+    height: 80px;
     display: grid;
     place-items: center;
     margin-bottom: 12px ;
@@ -122,9 +123,9 @@ body{
 
 .btn-login {
     text-decoration: none;
-    color: var(--color-100);
-    font-family: var(--letra-400);
-    font-size: 25px;
+    color: var(--color-1B);
+    font-family: var(--font-Sportation);
+    font-size: 48px;
 
 }
 

@@ -1,20 +1,22 @@
+
 :root {
 
-    --color-100: #1D2984;
-    --color-200: #B2EB14;
-    --color-300: #504AF4;
-    --color-400: #FAFAF1;
-    --color-500: #AFC5F4;
-    --color-600: #000000;
-    --letra-100: 'agains_modern_football', agains_modern_football;
-    --letra-200: 'Monserrat', Monserrat;
-    --letra-300: 'PRIMETIME', PRIMETIME;
-    --letra-400: 'Staatliches-Regular', Staatliches-Regular;
+    --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
+    --font-Monserrat: "Monserrat", "Monserrat";
+    --font-Sportation: "Sportation", "Sportation";
+    --font-Afacad: "Afacad-VariableFont_wght","Afacad-VariableFont_wght";
+    --color-1B: #FBFBF6;
+    --color-2A: #F0AD21;
+    --color-3RF: #F91B40;
+    --color-4RB: #FB7187;
+    --color-5AC: #2791E5;
+    --color-6GM: #464646;
 }
 
+
 @font-face {
-    font-family: "agains_modern_football";
-    src: url(/fonts/against_modern_football.ttf)format("truetype")
+    font-family: "BaksoSapi";
+    src: url(/fonts/BaksoSapi.otf)format("opentype")
 }
 
 * {
@@ -23,16 +25,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "Staatliches-Regular";
-    src: url(/fonts/Staatliches-Regular.ttf)format("truetype")
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 @font-face {
     font-family: "Monserrat";
@@ -46,8 +38,19 @@
 }
 
 @font-face {
-    font-family: "PRIMETIME";
-    src: url(/fonts/PRIMETIME.ttf)format("truetype")
+    font-family: "Sportation";
+    src: url(/fonts/Sportation.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Afacad";
+    src: url(/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
 }
 
 * {
@@ -60,95 +63,108 @@
 
 
 body{
-    background-color: var(--color-400);
+    overflow-x: hidden;
 }
 
-.navbar {
-    background-image: url("/Image/Header.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 0px 40px 0px 40px;
-    height: 120px;
-}
+.wrapper-NL {
+display: flex;
+justify-content: center;
+margin-top: 50px;
 
-.wrapper-logo {
-    margin-bottom: 12px ;
 }
 
 
-#titulo {
 
-    font-family: var(--letra-100);
-    font-size: 40px;
-    color: #1D2984;
+.titulo {
+
+    font-family: var(--font-Sportation);
+    color: var(--color-4RB);
+    font-size: 60px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.conteinerCards {
+display: grid;
+justify-content: center;
+
 
 }
 
-.wrapper-opcLogin {
 
-    padding-left: 750px;
-}
+.flexCard{
 
-.ul-list{
-    list-style-type: none;
     display: flex;
+    align-items: center;
     justify-content: center;
-    
-}
-
-.li-opc{
-    padding: 0px 30px 0px 0px;
-}
-
-.header-icon{
-    
-   
-    width: 60px;
-    height: 60px;
-}
-
-#subtitulo {
-
-    font-family: var(--letra-400);
-    font-size: 25px;
-    color: var(--color-100);
-    text-decoration: none;
+    width: 2000px;
 }
 
 
-.wrapper-btn {
-    background-color: var(--color-500);
+.card{
+    margin: 65px;
+}
+
+
+.card-text {
+    width: 400px;
+    height: 300px;
     border-radius: 50px;
-    width: 200px;
-    height: 50px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 12px ;
+   
+
 }
 
-.btn-login {
-    text-decoration: none;
-    color: var(--color-100);
-    font-family: var(--letra-400);
+.icon-search{
+    width: 30px;
+    height: 30px;
+}
+
+
+.card-link{
+    font-family: var(--letra-200);
     font-size: 25px;
+    font-weight: 500;
+    color: var(--color-600);
+    text-decoration: none;
 
 }
 
 
-.wrapper-perfil{
-   display: flex;
-   align-items: center;
-   margin-bottom: 12px;
-   border-color: var(--color-200);
+.card-title{
+    width: 400px;
+    font-family: var(--font-Sportation);
+    font-size: 40px;
+    padding: 10px;
 }
 
-.img-perfil{
-    border: 4px solid #B2EB14;
-    border-radius: 50%;
-   
-
-    height: 80px;
-    width: 80px;
-   
+.wrapper-places {
+    background-color: var(--color-4RB);
+    border-radius: 50px;
+    width: 380px;
+    height: 60px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:100px
 }
+
+.btn-places {
+
+    font-family: var(--font-Afacad);
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    
+}
+
+
+.icon-flecha{
+    width: 60px;
+    height:60px;
+      
+
+}
+
