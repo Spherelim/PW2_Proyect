@@ -1,10 +1,9 @@
-
 :root {
 
     --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
     --font-Monserrat: "Monserrat", "Monserrat";
     --font-Sportation: "Sportation", "Sportation";
-    --font-Afacad: "Afacad-Regular","Afacad-Regular";
+    --font-Afacad: "Afacad-Regular", "Afacad-Regular";
     --color-1B: #FBFBF6;
     --color-2A: #F0AD21;
     --color-3RF: #F91B40;
@@ -62,110 +61,280 @@
 
 
 
-body{
+body {
     overflow-x: hidden;
 }
 
 
-.wrapper-NL {
-display: flex;
-justify-content: center;
-margin-top: 50px;
+.conteinerPlace {
+    display: flex;
+    justify-content: center;
+
+
+    padding: 40px 0px 0px 0px;
+}
+
+.imgPlace {
+    border-radius: 25px;
+    width: 600px;
+    height: 526px;
 
 }
 
+.infoGrid {
 
-
-.titulo {
-
-    font-family: var(--font-Sportation);
-    color: var(--color-4RB);
-    font-size: 60px;
-    text-align: center;
-    padding: 20px;
-}
-
-
-.conteinerCards {
-display: grid;
-justify-content: center;
-
+    display: grid;
+    align-content: center;
+    padding: 30px;
+    background-image: url(/image/fondo-card.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 12px solid transparent;
+    border-radius: 50px;
+    width: 800px;
+    height: 560px;
 
 }
 
-
-.flexCard{
+.categoria {
 
     display: flex;
+    justify-content: right;
+
     align-items: center;
-    justify-content: center;
-    width: 2000px;
+    width: 700px;
+    height: 40px;
+
+    font-family: var(--font-Afacad);
+    font-style: italic;
+    font-size: 30px;
+}
+
+tCat {}
+
+input {
+
+    font-style: italic;
+    border: none;
+    text-align: left;
+    padding-left: 20px;
 }
 
 
-.card{
-    margin: 65px;
-}
+.nomPlace {
 
-
-.card-text {
-    width: 400px;
-    height: 300px;
-    border-radius: 50px;
-   
-
-}
-
-.icon-search{
-    width: 30px;
-    height: 30px;
-}
-
-
-.card-link{
-    font-family: var(--letra-200);
-    font-size: 25px;
-    font-weight: 500;
-    color: var(--color-600);
-    text-decoration: none;
-
-}
-
-
-.card-title{
-    width: 400px;
     font-family: var(--font-Sportation);
-    font-size: 40px;
+    color: var(--color-6GM);
+    font-size: 80px;
+    text-align: center;
     padding: 10px;
 }
 
-.wrapper-places {
-    background-color: var(--color-4RB);
-    border-radius: 50px;
-    width: 380px;
-    height: 60px;
-  
+
+.pText {
+    font-family: var(--font-Afacad);
+    font-size: 40px;
+    color: var(--color-6GM);
+    margin: 0px 40px 0px 40px;
+}
+
+
+
+
+.conteinerMore {
+    display: flex;
+    justify-content: center;
+
+    
+    padding: 40px 0px 0px 0px;
+}
+
+
+.location {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    background-image: url(/image/container-ubicacion.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 470px;
+}
+
+
+.btnLocation {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-image: url(/image/boton-compartir.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 70px;
+    margin: auto;
+}
+
+.ver {
+
+    text-decoration: none;
+    font-family: var(--font-Afacad);
+    font-size: 30px;
+    color: var(--color-6GM);
+}
+
+
+
+
+.comment {
+
+    display: grid;
+    justify-content: left;
+    padding-left: 80px;
+    align-content: center;
+
+    background-image: url(/image/comentario-container.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+   
+    width: 900px;
+    height: 470px;
+
+}
+
+.titulo{
+
+    font-family: var(--font-BaksoSapi);
+    color: var(--color-6GM);
+    margin-top: -80px;
+}
+
+
+.user {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:100px
+    gap: 20px;
+    width: 700px;
+    height: 200px;
+     
+   
+    
 }
 
-.btn-places {
+.imgUser {
+
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+
+    padding: 5px;
+}
+
+.chatComment{
+    padding: 5px;
+}
+
+
+#nomUser {
+    font-family: var(--font-Sportation);
+    font-size: 25px;
+    color: var(--color-6GM);
+}
+
+
+.wrapperP{
+    background-color: var(--color-1B);
+    border: 2px solid #464646;
+    border-radius: 25px;
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+}
+
+
+.userComment {
 
     font-family: var(--font-Afacad);
-    font-size: 25px;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
+    font-size: 15px;
+    color: var(--color-6GM);
+  
+    
+
+
+}
+
+
+
+
+.conteinerReacciones {
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: auto;
+    width: 1340px;
+    height: 150px;
+    
+     
+}
+
+.btnReacciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+
+
+    background-image: url(/image/fondo-reaccion.png);
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    width: 460px;
+    height: 150px;
+ 
     
 }
 
 
-.icon-flecha{
-    width: 60px;
-    height:60px;
-      
+button {
 
+    border: none;
+    background: transparent;
 }
 
+
+.addComment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/image/fondo-comment.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 900px;
+    height: 180px;
+}
+
+.iSend{
+    font-family: var(--font-Afacad);
+    color: var(--color-6GM);
+    background-image: url(/image/addComment.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 530px;
+    height: 40px;
+    border-radius: 25px;
+
+    border: none;
+    outline: none;
+}
+
+
+.iconSend{
+
+    width: 60px;
+    height: 60px;
+}
