@@ -4,7 +4,7 @@
     --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
     --font-Monserrat: "Monserrat", "Monserrat";
     --font-Sportation: "Sportation", "Sportation";
-    --font-Afacad: "Afacad-VariableFont_wght","Afacad-VariableFont_wght";
+    --font-Afacad: "Afacad-Regular","Afacad-Regular";
     --color-1B: #FBFBF6;
     --color-2A: #F0AD21;
     --color-3RF: #F91B40;
@@ -49,8 +49,8 @@
 }
 
 @font-face {
-    font-family: "Afacad";
-    src: url(/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+    font-family: "Afacad-Regular";
+    src: url(/fonts/Afacad-Regular.ttf)format("truetype")
 }
 
 * {
@@ -58,5 +58,102 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
+
+body{
+    
+}
+
+.grid{
+    display:grid;
+     padding-bottom: 160px;
+}
+
+
+.flexCard{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px 0px 40px;
+    gap: 136px;
+}
+
+
+.wrapperCards {
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: url("/image/div-card.png");
+background-position: center;
+background-repeat: no-repeat;
+width: 320px;
+height: 430px;
+
+}
+
+
+
+.titulo {
+
+    font-family: var(--font-Sportation);
+    color: var(--color-6GM);
+    font-size: 40px;
+    text-align: center;
+   
+}
+
+
+.wrapperFoto{
+    text-align: center;
+    margin: 29px 0px 29px 0px ;
+}
+
+.imgFav{
+    border-radius: 100%;
+    border: 4px solid ;
+    border-color:  var(--color-3RF);
+    width: 200px;
+    height: 200px;
+
+    
+}
+
+.conteinerCards {
+display: grid;
+justify-content: center;
+align-content: center;
+
+}
+
+
+
+
+.wrapperGo {
+    background-image: url(/image/btnVolver.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 80px;
+
+    font-family: var(--font-Sportation);
+    font-size: 40px;
+    font-weight: lighter;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+.aVolver{
+text-decoration: none;
+color: var(--color-1B);
+}
+
 
 

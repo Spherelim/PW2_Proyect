@@ -2,3 +2,7 @@ fetch("/Html/partial/header.html") .then(response => response.text()) .then(data
 
 
 fetch("/Html/partial/header-login.html") .then(response => response.text()) .then(data => { document.getElementById("header-login").innerHTML = data; });
+
+
+
+fetch("/Html/partial/footer.html") .then(response => response.text()) .then(data => { document.getElementById("footer").innerHTML = data; });

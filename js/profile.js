@@ -14,7 +14,7 @@ editIcon.addEventListener('click', () => {
 
     if (activo == 1) {
 
-        alert(activo);
+        /* alert(activo); */
          
         activo = 2;
 
@@ -34,7 +34,7 @@ editIcon.addEventListener('click', () => {
     } else if (activo == 2) {
 
         activo = 1;
-        alert(activo);
+      /*   alert(activo); */
         passwordSection.style.display = 'none';
         passwordInput.style.display = 'none';
        

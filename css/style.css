@@ -4,7 +4,7 @@
     --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
     --font-Monserrat: "Monserrat", "Monserrat";
     --font-Sportation: "Sportation", "Sportation";
-    --font-Afacad: "Afacad-VariableFont_wght","Afacad-VariableFont_wght";
+    --font-Afacad: "Afacad-Regular","Afacad-Regular";
     --color-1B: #FBFBF6;
     --color-2A: #F0AD21;
     --color-3RF: #F91B40;
@@ -49,8 +49,8 @@
 }
 
 @font-face {
-    font-family: "Afacad";
-    src: url(/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+    font-family: "Afacad-Regular";
+    src: url(/fonts/Afacad-Regular.ttf)format("truetype")
 }
 
 * {
