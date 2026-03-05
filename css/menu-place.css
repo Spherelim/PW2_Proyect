@@ -63,14 +63,13 @@
 
 
 body{
-    overflow-x: hidden;
 }
 
-.wrapper-NL {
+.wrapperSearch {
 display: flex;
 justify-content: center;
-margin-top: 50px;
-
+margin-top: 10px;
+margin-bottom: 50px;
 }
 
 
@@ -78,32 +77,38 @@ margin-top: 50px;
 .titulo {
 
     font-family: var(--font-Sportation);
-    color: var(--color-4RB);
+    color: var(--color-6GM);
     font-size: 60px;
     text-align: center;
-    padding: 20px;
+    margin-top: 60px;
 }
 
 
-.conteinerCards {
-display: grid;
-justify-content: center;
+.inputSearch{
+    border: none;
+    outline: none;
+    background-image: url(/image/img-search.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 80px;
+    padding: 40px;
 
-
+    font-family: var(--font-Afacad);
+    font-size: 40px;
+    color: #FB7187;
 }
 
-
-.flexCard{
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2000px;
+input::placeholder{
+    font-family: var(--font-Afacad);
+    font-size: 40px;
+    color: #FB7187;
 }
 
 
 .card{
-    margin: 65px;
+    margin: 20px 65px 20px 65px;
+    
 }
 
 
