@@ -59,7 +59,9 @@
     box-sizing: border-box;
 }
 
-
+body{
+    overflow: hidden;
+}
 
 .wrapperProf {
 
@@ -73,7 +75,7 @@
 .bodyProf {
 
     width: 1354px;
-    height: 633px;
+    height: 560px;
     box-shadow: 0px 7px 6px #464646;
     background-color: var(--color-1B);
     border-radius: 50px;
@@ -129,7 +131,7 @@
 
 .lProf {
     font-family: var(--font-Sportation);
-    font-size: 35px;
+    font-size: 20px;
     color: var(--color-3RF);
     text-align: left;
     padding: 0px 170px 0px 0px;
@@ -188,8 +190,8 @@
     position: fixed;
 
 
-    top: 700px;
-    right: 200px;
+    top: 630px;
+    right: 150px;
 
 }
 
@@ -200,4 +202,11 @@
     font-size: 40px;
     background-color: transparent;
 
+}
+
+#zona{
+
+    font-family: var(--font-Sportation);
+    color:var(--color-6GM);
+    padding-left: 200px;
 }

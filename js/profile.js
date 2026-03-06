@@ -7,6 +7,7 @@ const Fecha = document.getElementById("fechaNacProf");
 const apodo = document.getElementById("apodoProf");
 const correoProf = document.getElementById("correoProf");
 const favLink = document.getElementById("aFav");
+const zona = document.getElementById("zona");
 let activo = 1;
 
 editIcon.addEventListener('click', () => {
@@ -29,7 +30,8 @@ editIcon.addEventListener('click', () => {
         apodo.disabled = false; 
         correoProf.disabled = false;
 
-       favLink.style.pointerEvents = "none";
+        zona.textContent = "Editar perfil"
+        favLink.style.pointerEvents = "none";
 
     } else if (activo == 2) {
 
@@ -45,7 +47,8 @@ editIcon.addEventListener('click', () => {
         Fecha.disabled = true;
         apodo.disabled = true; 
         correoProf.disabled = true;
-
+      
+        zona.textContent = "Perfil"
         favLink.style.pointerEvents = "auto";
     }
 
