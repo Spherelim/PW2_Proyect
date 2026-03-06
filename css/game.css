@@ -1,10 +1,9 @@
-
 :root {
 
     --font-BaksoSapi: "BaksoSapi", "BaksoSapi";
     --font-Monserrat: "Monserrat", "Monserrat";
     --font-Sportation: "Sportation", "Sportation";
-    --font-Afacad: "Afacad-Regular","Afacad-Regular";
+    --font-Afacad: "Afacad-Regular", "Afacad-Regular";
     --color-1B: #FBFBF6;
     --color-2A: #F0AD21;
     --color-3RF: #F91B40;
@@ -62,109 +61,228 @@
 
 
 
-body{
+body {
     overflow-x: hidden;
-}
-
-.wrapper-NL {
-display: flex;
-justify-content: center;
-margin-top: 50px;
-
-}
-
-
-
-.titulo {
-
-    font-family: var(--font-Sportation);
-    color: var(--color-4RB);
-    font-size: 60px;
-    text-align: center;
-    padding: 20px;
-}
-
-
-.conteinerCards {
-display: grid;
-justify-content: center;
-
-
-}
-
-
-.flexCard{
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2000px;
-}
-
-
-.card{
-    margin: 65px;
-}
-
-
-.card-text {
-    width: 400px;
-    height: 300px;
-    border-radius: 50px;
    
 
 }
 
-.icon-search{
-    width: 30px;
-    height: 30px;
-}
 
-
-.card-link{
-    font-family: var(--letra-200);
-    font-size: 25px;
-    font-weight: 500;
-    color: var(--color-600);
-    text-decoration: none;
-
-}
-
-
-.card-title{
-    width: 400px;
-    font-family: var(--font-Sportation);
-    font-size: 40px;
-    padding: 10px;
-}
-
-.wrapper-places {
-    background-color: var(--color-4RB);
-    border-radius: 50px;
-    width: 380px;
-    height: 60px;
-  
+.estadio {
+    
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap:100px
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
 }
 
-.btn-places {
+.imgEst {
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+    border: 10px solid transparent;
+    background: url(/image/pincel-rosa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0px 0px 10px #464646;
+
+}
+
+.infEstadio {
+
+    width: 1000px;
+    height: 250px;
+
+    display: grid;
+    place-items: center;
+
+    background: url(/image/border-estadio.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FBFBF6;
+    border-radius: 25px;
+
+
+    position: absolute;
+    top: 550px;
+}
+
+.titulo {
+
+    font-family: var(--font-Sportation);
+    color: var(--color-6GM);
+    font-size: 60px;
+
+}
+
+.subtitulo {
 
     font-family: var(--font-Afacad);
+    color: var(--color-6GM);
+    font-size: 40px;
+
+}
+
+.sede {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-Afacad);
+    color: var(--color-6GM);
     font-size: 25px;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-    
-}
 
 
-.icon-flecha{
-    width: 60px;
-    height:60px;
-      
 
 }
 
+input {
+
+    border: none
+}
+
+
+
+.partido{
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+
+    background-color: var(--color-1B);
+
+    padding-bottom: 40px;
+    border-radius: 50px;
+    border: 4px solid #F0AD21;
+}
+
+.tPartido {
+
+    font-family: var(--font-Sportation);
+    color: var(--color-6GM);
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
+
+
+}
+
+.wrapperDes {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.descripcion {
+
+    font-family: var(--font-Afacad);
+    color: var(--color-6GM);
+    font-size: 25px;
+    width: 65%;
+    text-align: center;
+    margin-top: 10px;
+
+    background-color: var(--color-1B);
+    border-radius: 25px;
+    padding: 4px;
+
+
+    border: 2px solid #F0AD21;
+
+
+
+}
+
+
+
+.partidoInfo {
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 630px;
+    height: 250px;
+
+   
+}
+
+.ptitulo {
+    font-family: var(--font-Afacad);
+    font-size: 35px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.fecha {
+    font-family: var(--font-Afacad);
+    font-size: 20px;
+    text-align: center;
+}
+
+.imgPartido {
+    display: flex;
+    width: 600px;
+    height: 126px;
+
+
+
+}
+
+.flexPais {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background: url(/image/div-partidos.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 630px;
+    height: 150px;
+}
+
+.imgP1 {
+
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.imgP2 {
+
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+
+.vs {
+
+    font-family: var(--font-BaksoSapi);
+    font-size: 30px;
+    padding: 0px 50px 0px 50px;
+}
+
+
+.Pais1 {
+
+    font-family: var(--font-Afacad);
+    font-size: 30px;
+}
+
+.Pais2 {
+
+    font-family: var(--font-Afacad);
+    font-size: 30px;
+}
