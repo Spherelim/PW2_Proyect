@@ -23,12 +23,12 @@
             <!-- Título de la página -->
             <div class="wrapper-opc">
 
-                <a id="subtitulo" href="/Html/index.html">INICIO</a>
+                <a id="subtitulo" href="/PW2_Proyect/index.html">INICIO</a>
             </div>
 
             <!-- Botón ingresar -->
             <div class="wrapper-btn">
-                <a href="/Html/login.html" class="btn-login">REGRESAR</a>
+                <a href="/PW2_Proyect/login.html" class="btn-login">REGRESAR</a>
             </div>
 
 
@@ -87,7 +87,7 @@
 
                 <div class="flexReg">
                     <input class="iReg" type="password">
-                    <button class="formBtnReg" onclick="window.location.href='/html/profile.html'">Registro</button>
+                    <button class="formBtnReg" onclick="window.location.href='/PW2_Proyect/profile.html'">Registro</button>
                 </div>
 
 

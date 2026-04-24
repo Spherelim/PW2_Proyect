@@ -25,13 +25,13 @@
             <div class="wrapper-opcLogin">
                 <ul class="ul-list">
                     <li class="li-opc">
-                        <a href="/Html/game.html"><img class="header-icon " src="/image/icons/icon-estadios.png" alt=""></a>
+                        <a href="/PW2_Proyect/game.html"><img class="header-icon " src="/image/icons/icon-estadios.png" alt=""></a>
                     </li>
                     <li class="li-opc">
-                        <a href="/Html/menu-place.html"><img class="header-icon" src="/image/icons/icon-lugares.png" alt=""></a>
+                        <a href="/Html/menu-place.PW2_Proyect"><img class="header-icon" src="/image/icons/icon-lugares.png" alt=""></a>
                     </li>
                     <li class="li-opc">
-                        <a href="/Html/favorite.html"><img class="header-icon" src="/image/icons/icon-favorito.png" alt=""></a>
+                        <a href="/PW2_Proyect/favorite.PW2_Proyect"><img class="header-icon" src="/image/icons/icon-favorito.png" alt=""></a>
                     </li>
                     
                 </ul>
@@ -40,7 +40,7 @@
 
         
             <div class="wrapper-perfil">
-                <a href="/Html/profile.html"><img  class="img-perfil"  src="/Image/snoopy-profile.jfif" alt=""></a>
+                <a href="/PW2_Proyect/profile.html"><img  class="img-perfil"  src="/Image/snoopy-profile.jfif" alt=""></a>
             </div>
 
 

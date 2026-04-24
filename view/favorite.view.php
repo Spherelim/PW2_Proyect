@@ -34,7 +34,7 @@
 
 
                     <div class="wrapperGo">
-                        <a href="/html/place.html" class="aVolver">volver</a>
+                        <a href="/PW2_Proyect/place.html" class="aVolver">volver</a>
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@
 
 
                     <div class="wrapperGo">
-                        <a href="/html/place.html" class="aVolver">volver</a>
+                        <a href="/PW2_Proyect/place.html" class="aVolver">volver</a>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
 
 
                     <div class="wrapperGo">
-                        <a href="/html/place.html" class="aVolver">volver</a>
+                        <a href="/PW2_Proyect/place.html" class="aVolver">volver</a>
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@
 
 
                     <div class="wrapperGo">
-                        <a href="/html/place.html" class="aVolver">volver</a>
+                        <a href="/PW2_Proyect/place.html" class="aVolver">volver</a>
                     </div>
                 </div>
 
@@ -115,7 +115,7 @@
 
 
                     <div class="wrapperGo">
-                        <a href="/html/place.html" class="aVolver">volver</a>
+                        <a href="/PW2_Proyect/place.html" class="aVolver">volver</a>
                     </div>
                 </div>
 
@@ -133,7 +133,7 @@
 
 
                     <div class="wrapperGo">
-                        <a href="/html/place.html" class="aVolver">volver</a>
+                        <a href="/PW2_Proyect/place.html" class="aVolver">volver</a>
                     </div>
                 </div>
 

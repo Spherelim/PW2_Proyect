@@ -66,7 +66,7 @@
 
 
             <div id="linkFav">
-                <a href="/html/favorite.html" id="aFav">Favoritos</a>
+                <a href="/PW2_Proyect/favorite.html" id="aFav">Favoritos</a>
             </div>
 
         </div>

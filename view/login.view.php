@@ -23,10 +23,10 @@
             <label class="lLogin" for="">Contraseña</label>
             <input class="iLogin" type="password">
 
-            <p class="txtReg">¿Aun no tienes cuenta?Da click <a href="/Html/register.html " class="linkReg">Registrate</a> </p>
+            <p class="txtReg">¿Aun no tienes cuenta?Da click <a href="/PW2_Proyect/register.html " class="linkReg">Registrate</a> </p>
 
             <div class="wrapperBtn">
-                <a href="/Html/index.html" class="btn-reg">INGRESAR</a>
+                <a href="/PW2_Proyect/index.html" class="btn-reg">INGRESAR</a>
             </div>
 
         </div>
