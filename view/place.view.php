@@ -12,7 +12,15 @@
 
 <body>
 
-    <div id="header-login"></div>
+     <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
+
+        <?php require 'controller/header-login.php'; ?>
+
+    <?php else: ?>
+
+        <?php require 'controller/header.php'; ?>
+
+    <?php endif; ?>
 
     <div class="conteinerPlace">
 

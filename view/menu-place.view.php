@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="header-login"></div>
+    <?php require 'controller/header-login.php'; ?>
     <h1 class="titulo">Tu proxima aventura comienza aqui</h1>
 
 

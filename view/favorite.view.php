@@ -13,7 +13,8 @@
 
 <body>
 
-    <div id="header-login"></div>
+     <?php require 'controller/header-login.php'; ?>
+
 
     <div class="grid">
 
@@ -153,6 +154,5 @@
 
 </body>
 
-<script src="/js/header-login.js"></script>
 
 </html>

@@ -11,10 +11,7 @@
 
 <body>
 
-    <div id="header-login"></div>
-
-    
-
+      <?php require 'controller/header-login.php'; ?>
 
     <div class="estadio">
 
@@ -102,6 +99,5 @@
     </div>
 
 </body>
-<script src="/js/header-login.js"></script>
 
 </html>

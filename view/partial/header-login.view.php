@@ -28,7 +28,7 @@
                         <a href="/PW2_Proyect/game"><img class="header-icon " src="/image/icons/icon-estadios.png" alt=""></a>
                     </li>
                     <li class="li-opc">
-                        <a href="/Html/menu-place"><img class="header-icon" src="/image/icons/icon-lugares.png" alt=""></a>
+                        <a href="/PW2_Proyect/menu-place"><img class="header-icon" src="/image/icons/icon-lugares.png" alt=""></a>
                     </li>
                     <li class="li-opc">
                         <a href="/PW2_Proyect/favorite"><img class="header-icon" src="/image/icons/icon-favorito.png" alt=""></a>
