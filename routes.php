@@ -22,6 +22,16 @@ $router = new Router();
 //Es para ver que el server responde
 $router->add('/', 'controller/index.php'); //Necesito ver que cargue todo correctamente 
 
+// hola :D
+$router->add('/login', 'controller/login.php');
+$router->add('/register', 'controller/register.php');
+$router->add('/profile', 'controller/profile.php');
+$router->add('/game', 'controller/game.php');
+$router->add('/favorite', 'controller/favorite.php');
+$router->add('/place', 'controller/place.php');
+$router->add('/menu-place', 'controller/menu-place.php');
+
+
 
 //echo "URI solicitada: " . $_SERVER['REQUEST_URI'] . "<br>"; // para ver cual ruta solicite en la barra 
 
