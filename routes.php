@@ -20,14 +20,25 @@ $router = new Router();
 
 
 //Es para ver que el server responde
+
+
 $router->add('/', 'controller/index.php'); //Necesito ver que cargue todo correctamente 
+
+//* Iniciar sesion
 $router->add('/login', 'controller/login.php');
+$router->add('/login-process', 'controller/login-process.php');
+
+
+
 $router->add('/register', 'controller/register.php');
 $router->add('/profile', 'controller/profile.php');
 $router->add('/game', 'controller/game.php');
 $router->add('/favorite', 'controller/favorite.php');
 $router->add('/place', 'controller/place.php');
 $router->add('/menu-place', 'controller/menu-place.php');
+$router->add('/header', 'controller/header.php');
+$router->add('/header-login', 'controller/menu-login.php');
+$router->add('/footer', 'controller/footer.php');
 
 
 

@@ -23,12 +23,12 @@
             <!-- Título de la página -->
             <div class="wrapper-opc">
 
-                <a id="subtitulo" href="/PW2_Proyect/index.html">INICIO</a>
+               <!--  <a id="subtitulo" href="/PW2_Proyect/">INICIO</a> -->
             </div>
 
             <!-- Botón ingresar -->
             <div class="wrapper-btn">
-                <a href="/PW2_Proyect/login.html" class="btn-login">REGRESAR</a>
+                <a href="/PW2_Proyect/" class="btn-login">Inico</a>
             </div>
 
 

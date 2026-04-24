@@ -14,7 +14,17 @@
 
 <body>
 
-    <div id="header"></div>
+    
+
+    <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
+
+        <?php require 'controller/header-login.php'; ?>
+
+    <?php else: ?>
+
+        <?php require 'controller/header.php'; ?>
+
+    <?php endif; ?>
 
     <div class="wrapper-NL">
         <img src="/image/conteiner-text.png" alt="">
@@ -40,7 +50,7 @@
                     <h5 class="card-title">PASEO SANTA LUCIA</h5>
 
                     <div class="wrapper-places">
-                        <a href="/PW2_Proyect/place.PW2_Proyect" class="btn-places">Mas informacion</a>
+                        <a href="/PW2_Proyect/place" class="btn-places">Mas informacion</a>
 
 
                         <img class="icon-flecha" src="/image/icons/icon-flecha.png" alt="">

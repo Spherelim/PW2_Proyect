@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 /*
 *Gente con el requiere recuerden que ejecutamos y traemos codigo de otro php , en este caso la vista de home , que practicamente es un html porque necesito saber porque me carga un horrorsote :,D 
 

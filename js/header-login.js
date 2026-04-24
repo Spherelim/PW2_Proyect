@@ -1,8 +1,8 @@
-fetch("/Html/partial/header.html") .then(response => response.text()) .then(data => { document.getElementById("header").innerHTML = data; });
+fetch("/PW2_Proyect/header") .then(response => response.text()) .then(data => { document.getElementById("header").innerHTML = data; });
 
 
-fetch("/Html/partial/header-login.html") .then(response => response.text()) .then(data => { document.getElementById("header-login").innerHTML = data; });
+fetch("/PW2_Proyect/header-login") .then(response => response.text()) .then(data => { document.getElementById("header-login").innerHTML = data; });
 
 
 
-fetch("/Html/partial/footer.html") .then(response => response.text()) .then(data => { document.getElementById("footer").innerHTML = data; });
+fetch("/PW2_Proyect/footer") .then(response => response.text()) .then(data => { document.getElementById("footer").innerHTML = data; });
