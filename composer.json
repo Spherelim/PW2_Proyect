@@ -14,5 +14,10 @@
     "require": {},
     "scripts": {
         "serve":"php -S localhost:1080"
-    }
+    },
+    "test": [
+        
+            "Composer\\Config::disableProcessTimeout",
+            "phpunit"
+     ]
 }

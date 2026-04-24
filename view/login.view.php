@@ -18,15 +18,15 @@
             <h1 class="tLogin">INICIAR SESION</h1>
 
             <label class="lLogin">Correo electronico</label>
-            <input class="iLogin" type="text">
+            <input class="iLogin" type="text" name="iCorreoUser" value="<?php echo isset($correo) ? htmlspecialchars($correo) : ''; ?>">
 
             <label class="lLogin" for="">Contraseña</label>
-            <input class="iLogin" type="password">
+            <input class="iLogin" type="password" name="iContraUser">
 
             <p class="txtReg">¿Aun no tienes cuenta?Da click <a href="/PW2_Proyect/register.html " class="linkReg">Registrate</a> </p>
 
-            <div class="wrapperBtn">
-                <a href="/PW2_Proyect/index.html" class="btn-reg">INGRESAR</a>
+            <div class="wrapperBtn" >
+                <button href="" class="btn-reg" type="submit">INGRESAR</button>
             </div>
 
         </div>

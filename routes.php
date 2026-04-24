@@ -21,8 +21,6 @@ $router = new Router();
 
 //Es para ver que el server responde
 $router->add('/', 'controller/index.php'); //Necesito ver que cargue todo correctamente 
-
-// hola :D
 $router->add('/login', 'controller/login.php');
 $router->add('/register', 'controller/register.php');
 $router->add('/profile', 'controller/profile.php');
