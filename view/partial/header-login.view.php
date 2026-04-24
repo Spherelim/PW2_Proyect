@@ -9,8 +9,9 @@
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="/css/header-login.css">
-
+    
 </head>
 
 <body>
@@ -21,14 +22,25 @@
                 <h1 id="titulo">NLGo!</h1>
             </div>
 
-
-            <div class="wrapper-opc">
-                
-                <a id="subtitulo" href="/Html/place.html">LUGARES</a>
+            <div class="wrapper-opcLogin">
+                <ul class="ul-list">
+                    <li class="li-opc">
+                        <a href="/Html/game.html"><img class="header-icon " src="/image/icons/icon-estadios.png" alt=""></a>
+                    </li>
+                    <li class="li-opc">
+                        <a href="/Html/menu-place.html"><img class="header-icon" src="/image/icons/icon-lugares.png" alt=""></a>
+                    </li>
+                    <li class="li-opc">
+                        <a href="/Html/favorite.html"><img class="header-icon" src="/image/icons/icon-favorito.png" alt=""></a>
+                    </li>
+                    
+                </ul>
+            
             </div>
 
-            <div class="wrapper-btn">
-                <a href="/Html/login.html" class="btn-login">Ingresar</a>
+        
+            <div class="wrapper-perfil">
+                <a href="/Html/profile.html"><img  class="img-perfil"  src="/Image/snoopy-profile.jfif" alt=""></a>
             </div>
 
 

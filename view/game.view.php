@@ -40,7 +40,6 @@
     <h1 class="tPartido">Partidos</h1>
 
     <div class="ColumnaP">
-       
 
         <div class="partidoInfo">
 
@@ -92,7 +91,7 @@
             </div>
         </div>
 
-         <div class="wrapperDes">
+        <div class="wrapperDes">
 
 
             <p class="descripcion">Monterrey albergará tres partidos de la fase de grupos en total, y una eliminatoria, con

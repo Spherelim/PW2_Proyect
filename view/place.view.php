@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLGo! - place</title>
+    <link rel="stylesheet" href="/css/header-login.css">
+    <link rel="stylesheet" href="/css/place.css">
+
+</head>
+
+<body>
+
+    <div id="header-login"></div>
+
+    <div class="conteinerPlace">
+
+        <img src="/image/div-foto.png" alt="" class="imgPlace">
+
+        <div class="infoGrid">
+
+            <div class="categoria">
+
+                <label for="" class="tCat">Categoria :</label>
+                <input type="text" placeholder="Relajacion" disabled>
+            </div>
+
+
+            <h1 class="nomPlace">Paseo santa lucia</h1>
+
+            <p class="pText">Lorem ipsum dolor sit amet consectetur adipiscing elit, nunc augue aptent litora pulvinar
+                at arcu himenaeos, per cubilia cras nostra ac porta.</p>
+
+
+        </div>
+
+
+    </div>
+    <div class="conteinerMore">
+
+        <div class="location">
+            <img src="/image/icons/icon-location.png" alt="" class="imgLocation">
+
+            <div class="btnLocation">
+                <a href="" class="ver">ver</a>
+            </div>
+        </div>
+
+        <div class="comment">
+
+            <h1 class="titulo">
+                Comentarios
+            </h1>
+
+
+            <div class="gridComment">
+
+                <div class="user">
+
+                    <img src="/image/luffyProfile.jfif" alt="" class="imgUser">
+
+
+                    <div class="chatComment">
+                        <h1 id="nomUser">El pescado</h1>
+
+                        <div class="wrapperP">
+                            <p class="userComment">Lorem ipsum dolor sit amet consectetur adipiscing elit, nunc augue
+                                aptent
+                                litora pulvinar at arcu himenaeos, per cubilia cras nostra ac porta.</p>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+           
+                <div class="user">
+
+                    <img src="/image/violetaProfile.jfif" alt="" class="imgUser">
+
+
+                    <div class="chatComment">
+                        <h1 id="nomUser">La iguana norteña</h1>
+
+                        <div class="wrapperP">
+                            <p class="userComment">Lorem ipsum dolor sit amet consectetur adipiscing elit, nunc augue
+                                aptent
+                                litora pulvinar at arcu himenaeos, per cubilia cras nostra ac porta.</p>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="conteinerReacciones">
+
+        <div class="btnReacciones">
+
+            <h5 class="txtDislike">1</h5>
+            <button class="dislike"><img src="/image/icons/icon-dislike.png" alt=""></button>
+            <h5 class="txtLike">5</h5>
+            <button class="like"><img src="/image/icons/icon-like.png" alt=""></button>
+
+        </div>
+
+
+        <div class="addComment">
+
+            <input class="iSend" type="text" placeholder="Comentar...">
+
+            <button><img class="iconSend" src="/image/icons/icon-enviar.png" alt=""></button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- <div id="footer"></div> -->
+</body>
+<script src="/js/header-login.js"></script>
+
+</html>
