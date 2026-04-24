@@ -20,7 +20,7 @@ $router = new Router();
 
 
 //Es para ver que el server responde
-$router->add('/', 'html/index.html'); //Necesito ver que cargue todo correctamente 
+$router->add('/', 'controller/index.php'); //Necesito ver que cargue todo correctamente 
 
 
 //echo "URI solicitada: " . $_SERVER['REQUEST_URI'] . "<br>"; // para ver cual ruta solicite en la barra 
