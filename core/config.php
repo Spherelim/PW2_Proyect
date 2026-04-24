@@ -15,7 +15,7 @@ return [
 
      //* Nae
      //* Mau
-    'db' => [
+   /*  'db' => [
         'conexion_Mundiales' => [
             'host' => 'localhost',
             'dbname' => 'pw2_db_main',
@@ -23,5 +23,5 @@ return [
             'password' => 'root',
             'charset' => 'utf8mb4',   //Es para los caracteres especiales
         ]
-    ]
+    ] */
 ];
