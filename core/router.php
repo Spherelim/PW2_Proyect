@@ -3,7 +3,7 @@ namespace Core;
 class Router{
     private $routes = [];
     //Este registra rutas
-     public function add($route, $controller, $middleware = null) {
+    public function add($route, $controller, $middleware = null) {
         $this->routes[$route] = [
             'controller' => $controller,
             'middleware' => $middleware
