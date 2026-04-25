@@ -37,21 +37,9 @@ if (!empty($errors)) {
 }
 
 try {
-    $usuario = $db->query(
-        "SELECT 
-            id_usuario,
-            vcNombre,
-            vcEmail,
-            vcNickname,
-            dtFechaNacimiento,
-            vcPassword,
-            imagenPerfil,
-            iActivo
-        FROM usuarios
-        WHERE vcEmail = ?
-        LIMIT 1",
-        [$correo]
-    )->fetch();
+
+    $stmt = $db->query("CALL sp_login(?)", [$correo]);
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if (!$usuario) {
         $error = 'Credenciales inválidas.';
@@ -88,9 +76,10 @@ try {
     exit;
 
 } catch (Exception $e) {
+
     error_log('Error en login: ' . $e->getMessage());
 
-    $error = 'Error del sistema. Por favor, intente más tarde.';
+    $error = 'Error del sistema.';
     $page = 'login';
     require __DIR__ . '/../view/login.view.php';
     exit;

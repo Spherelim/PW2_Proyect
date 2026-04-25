@@ -66,19 +66,14 @@ if (isset($_FILES['imagenPerfil']) && $_FILES['imagenPerfil']['error'] === UPLOA
 
 $vcPasswordHash = password_hash($vcPassword, PASSWORD_DEFAULT);
 
-$db->query(
-    "INSERT INTO usuarios 
-    (vcNombre, vcEmail, vcNickname, dtFechaNacimiento, vcPassword, imagenPerfil) 
-    VALUES (?, ?, ?, ?, ?, ?)",
-    [
-        $vcNombre,
-        $vcEmail,
-        $vcNickname,
-        $dtFechaNacimiento,
-        $vcPasswordHash,
-        $imagenPerfil
-    ]
-);
+$stmt = $db->query("CALL sp_registro(?, ?, ?, ?, ?, ?)", [
+    $vcNombre,
+    $vcEmail,
+    $vcNickname,
+    $dtFechaNacimiento,
+    $vcPasswordHash,
+    $imagenPerfil
+]);
 
 header('Location: /PW2_Proyect/login?registro=ok');
 exit;
