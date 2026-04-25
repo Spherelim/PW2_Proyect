@@ -22,7 +22,7 @@
         </div>
 
         <div class="wrapper-opc">
-            <a id="subtitulo" href="/PW2_Proyect/place">LUGARES</a>
+            <!--<a id="subtitulo" href="/PW2_Proyect/place">LUGARES</a>-->
         </div>
 
         <div class="wrapper-btn">

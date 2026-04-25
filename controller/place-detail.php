@@ -25,6 +25,9 @@ if (!$lugar) {
     header('Location: /PW2_Proyect/place');
     exit;
 }
+$fotoLugar = !empty($lugar['image_url']) 
+    ? $lugar['image_url'] 
+    : '/Image/default.png';
 
 $stmt = $db->query("CALL sp_place_comentarios(?)", [$id]);
 $comentarios = $stmt->fetchAll(PDO::FETCH_ASSOC);

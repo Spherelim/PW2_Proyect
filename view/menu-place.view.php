@@ -62,7 +62,12 @@
                 ); ?>"
             >
 
-                <img src="/Image/santalucia.png" class="place-img" alt="Lugar">
+                <img 
+                    src="<?php echo !empty($lugar['image_url']) ? htmlspecialchars($lugar['image_url']) : '/PW2_Proyect/Image/default.png'; ?>" 
+                    class="place-img" 
+                    alt="<?php echo htmlspecialchars($lugar['vcNombre']); ?>"
+                    onerror="this.onerror=null; this.src='/PW2_Proyect/Image/default.png';"
+                >
 
                 <div class="card-body">
 
