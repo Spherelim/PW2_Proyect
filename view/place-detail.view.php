@@ -20,12 +20,9 @@
 
     <section class="detailHero">
 
-        <img 
-            src="<?php echo htmlspecialchars($fotoLugar); ?>" 
-            class="detailImg" 
-            alt="<?php echo htmlspecialchars($lugar['vcNombre']); ?>"
-            onerror="this.onerror=null; this.src='/Image/santalucia.png';"
-        >
+        <div class="detailImgBox">
+            <img src="/Image/santalucia.png" class="detailImg" alt="">
+        </div>
 
         <div class="detailInfo">
 
@@ -114,7 +111,7 @@
                     </span>
                 </button>
 
-                <a href="/PW2_Proyect/menu-place" class="btnBack">Volver</a>
+                <a href="/PW2_Proyect/place" class="btnBack">Volver</a>
 
                 <?php if (!empty($lugar['dLatitud']) && !empty($lugar['dLongitud'])): ?>
                     <a 

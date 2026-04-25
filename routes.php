@@ -53,7 +53,7 @@ $router->add('reaccion-locacion', 'controller/reaccion-locacion.php');
 $router->add('reaccion-comentario', 'controller/reaccion-comentario.php');
 $router->add('place-favorite', 'controller/place-favorite.php');
 
-$router->add('profile-update', 'controller/profile-update.php');
+
 
 //echo "URI solicitada: " . $_SERVER['REQUEST_URI'] . "<br>"; // para ver cual ruta solicite en la barra 
 
