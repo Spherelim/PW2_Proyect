@@ -41,6 +41,10 @@ $router->add('/header', 'controller/header.php');
 $router->add('/header-login', 'controller/menu-login.php');
 $router->add('/footer', 'controller/footer.php');
 
+//
+$router->add('register-process', 'controller/register-process.php');
+
+
 
 
 //echo "URI solicitada: " . $_SERVER['REQUEST_URI'] . "<br>"; // para ver cual ruta solicite en la barra 
