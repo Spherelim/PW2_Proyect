@@ -74,7 +74,7 @@ body{
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 40px;
+margin-top: 28px;
 
 }
 
@@ -113,9 +113,9 @@ margin-top: 40px;
 .iLogin{
     background-color: var(--color-3RF);
     border: none;
-    border-radius:25px; 
+    border-radius:20px; 
     width: 400px;
-    height: 60px;
+    height: 50px;
     margin: 0 auto;
     font-family: var(--font-Afacad);
     font-size: 30px;
@@ -157,13 +157,13 @@ margin-top: 40px;
 .btn-reg {
 
     font-family: var(--font-Sportation);
-    font-size: 45px;
+    font-size: 40px;
     font-weight: lighter;
     color:var(--color-1B);
     background-color: var(--color-4RB);
     text-align: center;
     width: 214px;
-    height: 70px;
+    height: 60px;
     border-radius: 50px;
     border: none;
     text-decoration: none;

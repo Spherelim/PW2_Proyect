@@ -49,7 +49,7 @@
 
               <!-- Mostrar errores si existen -->
                     <?php if (isset($error) && !empty($error)): ?>
-                        <div id="passwordHelpBlock" class="form-text" style="color: #B1E804ff ; padding-left:30px">
+                        <div id="passwordHelpBlock" class="form-text" style="font-size:14px;   color: #FB7187 ; text-align:center ;font-weight: bold;font-family: var(--font-Monserrat);">
                             <?php echo $error; ?>
                         </div>
                     <?php endif; ?>

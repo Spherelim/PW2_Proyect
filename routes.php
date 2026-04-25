@@ -27,6 +27,7 @@ $router->add('/', 'controller/index.php'); //Necesito ver que cargue todo correc
 //* Iniciar sesion
 $router->add('/login', 'controller/login.php');
 $router->add('/login-process', 'controller/login-process.php');
+$router->add('/logout', 'middleware/logout.php');
 
 
 

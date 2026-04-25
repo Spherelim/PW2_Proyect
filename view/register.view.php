@@ -23,7 +23,7 @@
             <!-- Título de la página -->
             <div class="wrapper-opc">
 
-               <!--  <a id="subtitulo" href="/PW2_Proyect/">INICIO</a> -->
+                <!--  <a id="subtitulo" href="/PW2_Proyect/">INICIO</a> -->
             </div>
 
             <!-- Botón ingresar -->
@@ -36,16 +36,16 @@
     </header>
 
 
-    <div class="wrapperReg">
+    <form class="wrapperReg" action="/register-process" method="POST" enctype="multipart/form-data">
 
         <div class="bodyReg">
 
             <div class="perfilReg">
-                
+
                 <input type="file" id="fileOpener" style="display:none" accept="image/*">
 
                 <img id="preview" class="imgReg" src="/Image/snoopy-profile.jfif" alt="" onclick="document.getElementById('fileOpener').click()">
-             
+
 
             </div>
 
@@ -99,9 +99,9 @@
                 
                 </div> -->
             </div>
-</div>
+    </form>
 
-        </div>
+    </div>
 
 
     </div>
