@@ -286,3 +286,66 @@ margin: auto;
     font-family: var(--font-Afacad);
     font-size: 30px;
 }
+
+/* Estilos para la descripción del estadio */
+.descripcionEstadio {
+    font-family: var(--font-Afacad);
+    font-size: 18px;
+    color: var(--color-6GM);
+    text-align: center;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 15px auto 10px auto;
+    padding: 0 20px;
+    font-style: italic;
+}
+
+/* Estilos mejorados para sede y ubicación */
+.sede {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.sede-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(240, 173, 33, 0.1);
+    padding: 8px 20px;
+    border-radius: 50px;
+    border-left: 3px solid var(--color-2A);
+}
+
+.sede-label {
+    font-family: var(--font-BaksoSapi);
+    font-size: 20px;
+    color: var(--color-2A);
+    font-weight: bold;
+}
+
+.sede-valor {
+    font-family: var(--font-Afacad);
+    font-size: 20px;
+    color: var(--color-6GM);
+}
+
+/* Ajuste responsive */
+@media (max-width: 768px) {
+    .sede {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .descripcionEstadio {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    
+    .sede-label, .sede-valor {
+        font-size: 16px;
+    }
+}

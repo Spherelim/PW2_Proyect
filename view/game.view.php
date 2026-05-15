@@ -11,91 +11,50 @@
 
 <body>
 
-      <?php require 'controller/header-login.php'; ?>
+    <?php require __DIR__ . '/../controller/header-login.php'; ?>
 
     <div class="estadio">
-
         <img src="/image/mty-estadio.jfif" alt="" class="imgEst">
-
         <div class="infEstadio">
-            <h1 class="titulo">Estadio BBVA</h1>
+            <h1 class="titulo"><?= htmlspecialchars($infoEstadio['Estadio'] ?? 'Estadio BBVA') ?></h1>
             <h4 class="subtitulo">"El gigante de acero"</h4>
+            
+            <p class="descripcionEstadio">
+                Sede oficial del Mundial 2026. Un estadio icónico con vista espectacular a la Sierra Madre.
+            </p>
 
             <div class="sede">
-                <label for="">sede: </label>
-                <input type="text" placeholder="Mexico" disabled>
+                <div class="sede-item">
+                    <label class="sede-label">Sede:</label>
+                    <span class="sede-valor"><?= htmlspecialchars($infoEstadio['País'] ?? 'México') ?></span>
+                </div>
 
-                <label for="">Ubicacion: </label>
-                <input type="text" placeholder="Guadalupe, Nuevo Leon" disabled>
-
-
+                <div class="sede-item">
+                    <label class="sede-label">Ubicación:</label>
+                    <span class="sede-valor"><?= htmlspecialchars($infoEstadio['Municipio'] ?? 'Guadalupe, Nuevo León') ?></span>
+                </div>
             </div>
         </div>
     </div>
 
-
     <h1 class="tPartido">Partidos</h1>
 
     <div class="ColumnaP">
-
         <div class="partidoInfo">
-
             <div class="partido">
-                <h1 class="ptitulo">Partido 12</h1>
-                <h2 class="fecha">Domingo, 14 de junio 2026</h2>
-
-
-                <div class="imgPartidos">
-
-                    <div class="flexPais">
-                        <img class="imgP1" src="/image/FIFA.jfif" alt="">
-                        <h1 class="Pais1">FIFA</h1>
-
-
-                        <h1 class="vs">VS</h1>
-
-                        <h1 class="Pais2">Tunez</h1>
-                        <img class="imgP2" src="/image/tunisia.jfif" alt="">
-                    </div>
-
-
-                    <h1 class="ptitulo">Partido 12</h1>
-                    <h2 class="fecha">Domingo, 14 de junio 2026</h2>
-
-
-                    <div class="imgPartidos">
-
-                        <div class="flexPais">
-                            <img class="imgP1" src="/image/FIFA.jfif" alt="">
-                            <h1 class="Pais1">FIFA</h1>
-
-
-                            <h1 class="vs">VS</h1>
-
-                            <h1 class="Pais2">Tunez</h1>
-                            <img class="imgP2" src="/image/tunisia.jfif" alt="">
-                        </div>
-
-
-
-
-                    </div>
-
-
-                </div>
-
-
+                <?php if (!empty($partidos)): ?>
+                    <?php foreach ($partidos as $partido): 
+                        $equipos = explode(' vs. ', $partido['Titular']);
+                        $equipo1 = $equipos[0] ?? 'Equipo 1';
+                        $equipo2 = $equipos[1] ?? 'Equipo 2';
+                        $fechaFormateada = $partido['FechaFormateada'];
+                        include __DIR__ . '/includes/partido-card.php';
+                    endforeach; ?>
+                <?php else: ?>
+                    <p style="text-align: center; padding: 50px;">No hay partidos programados para este estadio.</p>
+                <?php endif; ?>
             </div>
         </div>
-
-        <div class="wrapperDes">
-
-
-            <p class="descripcion">Monterrey albergará tres partidos de la fase de grupos en total, y una eliminatoria, con
-                un
-                partido de 16avos de final que se jugará el lunes 29 de junio de 2026.</p>
-        </div>
-
     </div>
 
 </body>
