@@ -22,13 +22,14 @@
             </div>
 
 
-            <div class="wrapper-opc">
+            <!--<<div class="wrapper-opc">
                 
                 <a id="subtitulo" href="/PW2_Proyect/place">LUGARES</a>
-            </div>
+            </div>-->
 
             <div class="wrapper-btn">
                 <a href="/PW2_Proyect/login" class="btn-login">Ingresar</a>
+                <a href="/PW2_Proyect/register" class="btn-register">Registro</a>
             </div>
 
 

@@ -1,54 +1,61 @@
 <?php
+
 namespace Core;
-class Router{
+
+class Router
+{
     private $routes = [];
-    //Este registra rutas
-    public function add($route, $controller, $middleware = null) {
+
+    public function add($route, $controller, $middleware = null)
+    {
+        $route = trim($route, '/');
+
         $this->routes[$route] = [
             'controller' => $controller,
             'middleware' => $middleware
         ];
     }
 
-    
-
-public function dispatch($uri) {
-
-
+    public function dispatch($uri)
+    {
         $uri = parse_url($uri, PHP_URL_PATH);
+
         $basePath = '/PW2_Proyect';
-        $uri = str_replace($basePath, '', $uri);
 
+        if (strpos($uri, $basePath) === 0) {
+            $uri = substr($uri, strlen($basePath));
+        }
 
-
+        $uri = trim($uri, '/');
 
         foreach ($this->routes as $key => $route) {
-            //echo "Comparando con ruta registrada: " . $key . "<br>";  --> la ruta que registre
+            $routePattern = preg_replace('/:\w+/', '([^/]+)', $key);
 
-            $routePattern = preg_replace('/:\w+/', '([^/]+)', trim($key, '/'));
-            if (preg_match('#^' . $routePattern . '$#', trim($uri, '/'), $matches)) {
-                
-                // EJECUTAR MIDDLEWARE SI EXISTE
+            if (preg_match('#^' . $routePattern . '$#', $uri, $matches)) {
+
                 $middleware = $route['middleware'] ?? null;
-                if ($middleware && file_exists($middleware)) {
-                    require $middleware; // ← Middleware se ejecuta primero
-                }
-            //echo "Cargando controlador: " . $route['controller'] . "<br>"; carga el controlador 
 
-                // EJECUTAR CONTROLADOR
+                if ($middleware && file_exists($middleware)) {
+                    require $middleware;
+                }
+
+                if (!file_exists($route['controller'])) {
+                    die("Controlador no encontrado: " . $route['controller']);
+                }
+
                 require $route['controller'];
                 return;
             }
         }
-        $this->abort(404);
+
+        $this->abort(404, $uri);
     }
 
-
-    
-//Manejo de errores
-      public function abort($code = 404) {
+    public function abort($code = 404, $uri = '')
+    {
         http_response_code($code);
         echo "Error $code: Page not found.";
+        echo "<br>Ruta recibida: " . htmlspecialchars($uri);
         exit();
     }
 }

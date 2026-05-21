@@ -1,116 +1,86 @@
 <?php
 
-
 session_start();
 
 use Core\Database;
 
-$config = require 'core/config.php';
+$config = require __DIR__ . '/../core/config.php';
 $db = new Database($config);
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: /PW2_Proyect/login');
+    exit;
+}
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$correo = trim($_POST['iCorreoUser'] ?? '');
+$contrasena = $_POST['iContraUser'] ?? '';
 
+$errors = [];
 
-    //Aqui limpiamos los parametros y mandamos el NAME
-    $correo = filter_var(trim($_POST['iCorreoUser'] ?? ''));
-    $contraseña = $_POST['iContraUser'] ?? '';
+if ($correo === '' || $contrasena === '') {
+    $errors[] = 'Por favor, complete todos los campos.';
+}
 
-    // Validaciones
-    $errors = [];
+if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = 'Correo electrónico inválido.';
+}
 
-    if (empty($correo) || empty($contraseña)) {
-        $errors[] = "Por favor, complete todos los campos.";
-    }
-    if (strlen($contraseña) <  8) {
-        $errors[] = "La contraseña no puede tener menos de 8 caracteres.";
-    } else if (strlen($contraseña)  > 10) {
-        $errors[] = "La contraseña no puede tener mas de 10 caracteres.";
-    }
+if (strlen($contrasena) < 6) {
+    $errors[] = 'La contraseña debe tener mínimo 6 caracteres.';
+}
 
-    if (!empty($errors)) {
-        $error = implode("<br>", $errors);
+if (!empty($errors)) {
+    $error = implode('<br>', $errors);
+    $page = 'login';
+    require __DIR__ . '/../view/login.view.php';
+    exit;
+}
+
+try {
+
+    $stmt = $db->query("CALL sp_login(?)", [$correo]);
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$usuario) {
+        $error = 'Credenciales inválidas.';
         $page = 'login';
-        require 'view/login.view.php';
-        exit();
+        require __DIR__ . '/../view/login.view.php';
+        exit;
     }
 
-    try {
-
-        // Valores del procedure      
-       
-        $stmt = $db->query("CALL sp_login(?, ?)", [
-            $correo,
-            $contraseña
-        ]);
-
-
-        // Primer resultset: datos del usuario
-        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        // Segundo resultset: mensaje y éxito
-        /* $stmt->nextRowset();
-        $out = $stmt->fetch(PDO::FETCH_ASSOC);
- */
-
-
-      /*   if ($out) {
-            $mensaje = $out['mensaje'] ?? '';
-            $exito   = (bool)$out['existe'];
-           
-        } else {
-            $mensaje = $out['mensaje'] ?? '';
-            $exito   = false;
-        } */
-
-        if ($usuario && $usuario['existe']==1) {
-            session_regenerate_id(true);
-
-            //*Usuario id
-            $_SESSION['session_id'] = $usuario['ID_Usuario'];
-            //*Nombre completo
-            $_SESSION['session_nomCom'] = $usuario['NombreCompleto'];
-            //*Nombre de usuario
-            $_SESSION['session_nickname'] = $usuario['UserName']; 
-            //*Fecha de nacimiento
-            $_SESSION['session_fecha'] = $usuario['FechaNac']; 
-            //*Correo
-            $_SESSION['session_correo'] = $usuario['mail'];
-            //*Contraseña
-            $_SESSION['session_contra'] = $usuario['Password'];
-            //*Foto
-            $_SESSION['session_foto']      = $usuario['Imagen'];
-            //*activo
-/*             $_SESSION['session_activo']      = $usuario['activo'];
- */
-
-            $_SESSION['logged_in'] = true;
-           
-           /*  $error = $mensaje ?: "Entro"; */
-            $error="Credenciales validas";
-             $page = 'index';
-            require 'view/index.view.php';
-         /*    if ($_SESSION['session_rol'] === 'Administrador') {
-                require 'controllers/mainAdmin.php';
-            } else {
-                require 'controllers/main.php';
-            } */
-
-            exit();
-
-        } else {
-            /* $error = $mensaje ?: "Credenciales inválidas."; */
-            $error="Credenciales inválidas";
-            $page = 'login';
-            require 'view/login.view.php';
-            exit();
-        }
-    } catch (Exception $e) {
-        error_log("Error en login: " . $e->getMessage());
-        die("Error exacto: " . htmlspecialchars($e->getMessage()));
-        $error = "Error del sistema. Por favor, intente más tarde.";
+    if ((int)$usuario['iActivo'] !== 1) {
+        $error = 'Usuario inactivo.';
         $page = 'login';
-        require 'view/login.view.php';
-        exit();
+        require __DIR__ . '/../view/login.view.php';
+        exit;
     }
-} 
+
+    if (!password_verify($contrasena, $usuario['vcPassword'])) {
+        $error = 'Credenciales inválidas.';
+        $page = 'login';
+        require __DIR__ . '/../view/login.view.php';
+        exit;
+    }
+
+    session_regenerate_id(true);
+
+    $_SESSION['session_id'] = $usuario['id_usuario'];
+    $_SESSION['session_nomCom'] = $usuario['vcNombre'];
+    $_SESSION['session_nickname'] = $usuario['vcNickname'];
+    $_SESSION['session_fecha'] = $usuario['dtFechaNacimiento'];
+    $_SESSION['session_correo'] = $usuario['vcEmail'];
+    $_SESSION['session_foto'] = $usuario['imagenPerfil'];
+    $_SESSION['logged_in'] = true;
+
+    header('Location: /PW2_Proyect/');
+    exit;
+
+} catch (Exception $e) {
+
+    error_log('Error en login: ' . $e->getMessage());
+
+    $error = 'Error del sistema.';
+    $page = 'login';
+    require __DIR__ . '/../view/login.view.php';
+    exit;
+}

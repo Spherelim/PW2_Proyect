@@ -1,55 +1,62 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-<!DOCTYPE html>
-<html lang="en">
+$nombreUsuario = $_SESSION['session_nomCom'] ?? 'Usuario';
+$fotoPerfil = '/Image/snoopy-profile.jfif';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="/css/header-login.css">
-    
-</head>
+if (!empty($_SESSION['session_foto'])) {
+    $fotoPerfil = 'data:image/jpeg;base64,' . base64_encode($_SESSION['session_foto']);
+}
+?>
 
-<body>
-    <header>
-        <nav class="navbar">
+<header class="nlgoHeader">
+    <nav class="nlgoNavbar">
 
-            <div class="wrapper-logo">
-                <h1 id="titulo">NLGo!</h1>
+        <a href="/PW2_Proyect/" class="nlgoLogo">
+            NLGo!
+        </a>
+
+        <ul class="nlgoMenu">
+            <li>
+                <a href="/PW2_Proyect/game" class="nlgoIconBtn" title="Juegos">
+                    <i class="fa-regular fa-futbol"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="/PW2_Proyect/menu-place" class="nlgoIconBtn" title="Lugares">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="/PW2_Proyect/favorite" class="nlgoIconBtn" title="Favoritos">
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+            </li>
+        </ul>
+
+        <div class="nlgoUserArea">
+            <div class="nlgoWelcome">
+                Bienvenid@, <strong><?php echo htmlspecialchars($nombreUsuario); ?></strong>
             </div>
 
-            <div class="wrapper-opcLogin">
-                <ul class="ul-list">
-                    <li class="li-opc">
-                        <a href="/PW2_Proyect/game"><img class="header-icon " src="/image/icons/icon-estadios.png" alt=""></a>
-                    </li>
-                    <li class="li-opc">
-                        <a href="/PW2_Proyect/menu-place"><img class="header-icon" src="/image/icons/icon-lugares.png" alt=""></a>
-                    </li>
-                    <li class="li-opc">
-                        <a href="/PW2_Proyect/favorite"><img class="header-icon" src="/image/icons/icon-favorito.png" alt=""></a>
-                    </li>
-                    
-                </ul>
-            
-            </div>
+            <a href="/PW2_Proyect/profile" class="nlgoProfileLink">
+                <img 
+                    src="<?php echo $fotoPerfil; ?>" 
+                    alt="Perfil" 
+                    class="nlgoProfileImg"
+                >
+            </a>
 
-        
-            <div class="wrapper-perfil">
-                <a href="/PW2_Proyect/profile"><img  class="img-perfil"  src="/Image/snoopy-profile.jfif" alt=""></a>
-            </div>
+            <a href="/PW2_Proyect/logout" class="nlgoLogoutBtn" title="Cerrar sesión">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+        </div>
 
+    </nav>
+</header>
 
-        </nav>
-    </header>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

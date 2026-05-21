@@ -1,27 +1,16 @@
 <?php
 
 return [
-
-    //* Liz
     'db' => [
         'conexion_Mundiales' => [
-            'host' => 'localhost',
+            'host' => '127.0.0.1',
             'dbname' => 'nlgo',
             'username' => 'root',
-            'password' => 'Noe_050703',
-            'charset' => 'utf8mb4',   //Es para los caracteres especiales
-        ]
-    ]
-
-     //* Nae
-     //* Mau
-   /*  'db' => [
-        'conexion_Mundiales' => [
-            'host' => 'localhost',
-            'dbname' => 'pw2_db_main',
-            'username' => 'root',
             'password' => 'root',
-            'charset' => 'utf8mb4',   //Es para los caracteres especiales
+            'charset' => 'utf8mb4'
         ]
-    ] */
+    ],
+    'google' => [
+        'maps_api_key' => 'AIzaSyC_0HvvRu-EEwFogXe3iHjLB-baWT3OwNo'
+    ]
 ];

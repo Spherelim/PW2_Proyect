@@ -30,8 +30,9 @@ $router->add('/login-process', 'controller/login-process.php');
 $router->add('/logout', 'middleware/logout.php');
 
 
-
+//
 $router->add('/register', 'controller/register.php');
+
 $router->add('/profile', 'controller/profile.php');
 $router->add('/game', 'controller/game.php');
 $router->add('/favorite', 'controller/favorite.php');
@@ -41,7 +42,18 @@ $router->add('/header', 'controller/header.php');
 $router->add('/header-login', 'controller/menu-login.php');
 $router->add('/footer', 'controller/footer.php');
 
+//
+$router->add('register-process', 'controller/register-process.php');
 
+
+//
+$router->add('place-detail', 'controller/place-detail.php');
+$router->add('comentario-store', 'controller/comentario-store.php');
+$router->add('reaccion-locacion', 'controller/reaccion-locacion.php');
+$router->add('reaccion-comentario', 'controller/reaccion-comentario.php');
+$router->add('place-favorite', 'controller/place-favorite.php');
+
+$router->add('profile-update', 'controller/profile-update.php');
 
 //echo "URI solicitada: " . $_SERVER['REQUEST_URI'] . "<br>"; // para ver cual ruta solicite en la barra 
 

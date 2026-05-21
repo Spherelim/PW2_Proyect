@@ -112,23 +112,97 @@ body{
 
 
 .wrapper-btn {
-    background-image: url(/image/btn-ingresar.png);
-    border-radius: 25px;
-    width: 164px;
-    height: 80px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 12px ;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 12px;
+    background: none;
+    width: auto;
+    height: auto;
 }
 
 .btn-login {
+    position: relative;
+    background-image: url(/image/btn-ingresar.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    width: 160px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     text-decoration: none;
     color: var(--color-1B);
     font-family: var(--font-Sportation);
-    font-size: 48px;
+    font-size: 32px;
 
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
+.btn-login:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+}
+
+.btn-login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+    transition: 0.5s;
+}
+
+.btn-login:hover::before {
+    left: 100%;
+}
+
+.btn-register {
+    position: relative;
+    border: 3px solid var(--color-1B);
+    border-radius: 25px;
+    padding: 10px 25px;
+
+    text-decoration: none;
+    color: var(--color-1B);
+    font-family: var(--font-Sportation);
+    font-size: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.btn-register:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: var(--color-1B);
+    color: var(--color-2A);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+}
+
+.btn-register::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+    transition: 0.5s;
+}
+
+.btn-register:hover::before {
+    left: 100%;
+}
 
 .wrapper-perfil{
    display: flex;
@@ -168,3 +242,134 @@ body{
     
  }
 
+.nlgoHeader {
+    width: 100%;
+    background: #F0AD21;
+    box-shadow: 0 5px 10px rgba(70, 70, 70, .18);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nlgoNavbar {
+    width: 100%;
+    min-height: 122px;
+    padding: 18px 42px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.nlgoLogo {
+    text-decoration: none;
+    font-family: var(--font-BaksoSapi, sans-serif);
+    font-size: 58px;
+    color: #FBFBF6;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.nlgoMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 42px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nlgoIconBtn {
+    text-decoration: none;
+    color: #F91B40;
+    font-size: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease;
+}
+
+.nlgoIconBtn:hover {
+    transform: scale(1.12) rotate(-5deg);
+    color: #FB1B40;
+}
+
+.nlgoUserArea {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.nlgoWelcome {
+    font-family: var(--font-Afacad, sans-serif);
+    font-size: 21px;
+    color: #FBFBF6;
+    background: rgba(255,255,255,.18);
+    padding: 8px 16px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.nlgoWelcome strong {
+    font-weight: 900;
+}
+
+.nlgoProfileImg {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #2791E5;
+    background: #FBFBF6;
+    transition: .2s ease;
+}
+
+.nlgoProfileImg:hover {
+    transform: scale(1.08);
+}
+
+.nlgoLogoutBtn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #F91B40;
+    color: #FBFBF6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    transition: .2s ease;
+}
+
+.nlgoLogoutBtn:hover {
+    transform: scale(1.1);
+    color: #FBFBF6;
+}
+
+@media (max-width: 900px) {
+    .nlgoNavbar {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        justify-items: center;
+        padding: 20px;
+    }
+
+    .nlgoUserArea {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nlgoWelcome {
+        font-size: 18px;
+    }
+
+    .nlgoLogo {
+        font-size: 48px;
+    }
+
+    .nlgoIconBtn {
+        font-size: 42px;
+    }
+}
