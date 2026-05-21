@@ -11,6 +11,7 @@
 
 <body>
 
+
     <?php require __DIR__ . '/../controller/header-login.php'; ?>
 
     <div class="estadio">
@@ -18,7 +19,7 @@
         <div class="infEstadio">
             <h1 class="titulo"><?= htmlspecialchars($infoEstadio['Estadio'] ?? 'Estadio BBVA') ?></h1>
             <h4 class="subtitulo">"El gigante de acero"</h4>
-            
+
             <p class="descripcionEstadio">
                 Sede oficial del Mundial 2026. Un estadio icónico con vista espectacular a la Sierra Madre.
             </p>
@@ -41,15 +42,24 @@
 
     <div class="ColumnaP">
         <div class="partidoInfo">
+
             <div class="partido">
                 <?php if (!empty($partidos)): ?>
-                    <?php foreach ($partidos as $partido): 
-                        $equipos = explode(' vs. ', $partido['Titular']);
+                    <?php
+                    $total = count($partidos);
+                    echo "<!-- TOTAL PARTIDOS: $total -->";
+
+                    for ($i = 0; $i < $total; $i++):
+                        $partidoActual = $partidos[$i];
+                        $equipos = explode(' vs. ', $partidoActual['Titular']);
                         $equipo1 = $equipos[0] ?? 'Equipo 1';
                         $equipo2 = $equipos[1] ?? 'Equipo 2';
-                        $fechaFormateada = $partido['FechaFormateada'];
-                        include __DIR__ . '/includes/partido-card.php';
-                    endforeach; ?>
+                        $fechaFormateada = $partidoActual['FechaFormateada'];
+
+                        echo "<!-- ITERACION $i: " . $partidoActual['Titular'] . " -->";
+                    ?>
+                        <?php include __DIR__ . '/includes/partido-card.php'; ?>
+                    <?php endfor; ?>
                 <?php else: ?>
                     <p style="text-align: center; padding: 50px;">No hay partidos programados para este estadio.</p>
                 <?php endif; ?>
