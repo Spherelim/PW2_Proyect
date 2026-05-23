@@ -69,9 +69,13 @@
 
 <hr>
 <h2> Instrucciones de ejecución: </h3>
+El proyecto se ejecuta con composer serve en la terminal, eso abre el servidor , se agrega de forma manual en composer.json
+en la parte de scripts, se agrega como variable el php -S localhost:1080.
 
 <div>
-    <p> para poder ejecutar la pagina tienes que tener descargafo php y MySQL. <br></p>
+    <p> Se utilizo php  , mysql y composer serve <br>
+    </p>
+
 </div>
 
 <br>
