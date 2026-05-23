@@ -1,3 +1,19 @@
+Integrantes
+Mauricio Eleuterio Ortiz Rodríguez   2001170
+Martha  Lizbeth Hernandez Hrndz      1957543
+Naydelin Vanessa Torres Galván       1917319
+
+
+
+
+
+
+
+
+
+
+
+
 Instalar tailwind 
 
 Paso 1: Instalar el node.js
@@ -34,3 +50,5 @@ Paso 5: Volvemos a tener tailwind.
 
 
 Referencia: https://www.youtube.com/watch?v=HxSbC2k_Yng
+
+
